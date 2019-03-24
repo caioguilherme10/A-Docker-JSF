@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <h:head>
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <title>Página Inicial</title>
+    </h:head>
+    <h:body class="blue lighten-5">    
+        <div class="navbar-fixed">
+            <nav>
+		<div class="nav-wrapper teal darken-2">
+                    <a href="index.xhtml" class="brand-logo center">Login</a>
+		</div>
+            </nav>
+	</div>
+        <div class="container">
+            <h:form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <h:inputText id="email" class="validate" value="#{ControladorContatos.email}" required="true"/>
+                        <!--<input id="email" type="email" class="validate">-->
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <h:inputSecret id="senha" class="validate" value="#{ControladorContatos.senha}" required="true"/>
+                        <!--<input id="password" type="password" class="validate">-->
+                        <label for="password">Senha</label>
+                    </div>
+                </div>
+                <div class="row center-align">
+                    <a jsf:action="#{ControladorContatos.logar()}" class="waves-effect waves-light btn teal darken-2" id="buttonSignIn">Login</a>
+                </div>
+            </h:form>
+            <div class="row center-align">
+		E novo?<a href="cadastro.xhtml"> Crie uma conta.</a>
+            </div>
+	</div>
+        <!--  Scripts-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </h:body>
+</html>
